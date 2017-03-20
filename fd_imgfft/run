@@ -1,9 +1,10 @@
 #!/bin/bash
-ARG=$1
+TOTNUM=$2
+STARTNUM=$1
 MAIN=$(pwd)
-PDPATH=/Applications/Pd-0.47-1.app/Contents/Resources/bin/
+PDPATH=/Users/nyu/Desktop/Pd-0.47-1.app/Contents/Resources/bin/
 cd $PDPATH
-./pd -nogui $MAIN/$ARG
+./pd -nogui -send ";full-path $MAIN;start-number $STARTNUM;total-number $TOTNUM;printer this message was printed from terminal" $MAIN/main.pd
 cd $MAIN
 exit
 

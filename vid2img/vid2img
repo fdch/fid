@@ -1,0 +1,20 @@
+#!/bin/bash
+PDPATH=/Applications/Pd-0.47-1.app/Contents/Resources/bin/
+MAIN=$(pwd)
+FILMNAME=$1
+echo "
+********************
+	vid2img 
+export a video file into images
+
+edit this path if it's not correct:
+
+$PDPATH
+
+********************
+"
+cd $PDPATH
+./pd -nogui -noaudio -nomidi -send ";full-path $MAIN;film-name $FILMNAME" $MAIN/main.pd
+cd $MAIN
+exit
+
