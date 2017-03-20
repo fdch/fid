@@ -1,0 +1,9 @@
+#!/bin/bash
+ARG=$1
+MAIN=$(pwd)
+PDPATH=/Applications/Pd-0.47-1.app/Contents/Resources/bin/
+cd $PDPATH
+./pd -nogui $MAIN/$ARG
+cd $MAIN
+exit
+
