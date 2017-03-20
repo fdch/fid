@@ -2,6 +2,7 @@
 PDPATH=/Applications/Pd-0.47-1.app/Contents/Resources/bin/
 MAIN=$(pwd)
 FILMNAME=$1
+mkdir img
 echo "
 ********************
 	vid2img 
