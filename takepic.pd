@@ -1,0 +1,28 @@
+#N canvas 607 150 450 300 10;
+#X msg 154 24 create \, 1;
+#X obj 154 46 gemwin;
+#X msg 76 138 file /Users/federicocamarahalac/Documents/fd_work/fid-master/img/fede
+1;
+#X msg 111 75 bang;
+#X msg 220 24 0 \, destroy \,;
+#X obj 27 7 gemhead -1;
+#X obj 12 97 pix_texture;
+#X obj 12 119 square 4;
+#X msg 29 42 colorspace Grey;
+#X obj 154 194 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 102 212 auto \$1;
+#X obj 121 95 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 22 77 pix_video;
+#X obj 19 193 pix_write;
+#X connect 0 0 1 0;
+#X connect 2 0 13 0;
+#X connect 3 0 13 0;
+#X connect 4 0 1 0;
+#X connect 5 0 12 0;
+#X connect 6 0 7 0;
+#X connect 7 0 13 0;
+#X connect 9 0 10 0;
+#X connect 10 0 13 0;
+#X connect 12 0 6 0;
