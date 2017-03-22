@@ -9,13 +9,13 @@
 -262144 -1 -1;
 #X obj 231 36 tgl 15 0 auto auto-set auto 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 11 6 cnv 15 512 15 empty imgfft-path-set PATH:/Users/nyu/Desktop/fid-master-4/fd_imgfft
+#X obj 11 6 cnv 15 512 15 empty imgfft-path-set PATH:/Users/federicocamarahalac/Documents/fd_work/fid-master/fd_imgfft
 5 7 0 10 -233017 -66577 0;
 #X obj 94 37 nbx 5 14 -1e+06 1e+10 0 0 image image-set image 0 -8 0
 10 -262144 -1 -1 0 256;
 #X obj 12 36 bng 15 250 50 0 edit-path edit-path-set edit-path 17 7
 0 10 -262144 -1 -1;
-#N canvas 542 147 147 260 guts 0;
+#N canvas 543 145 147 260 guts 0;
 #N canvas 690 149 272 201 gemwin 0;
 #X obj 18 163 gemwin;
 #X obj 18 125 t a a;
@@ -120,6 +120,7 @@ delayratio 1000 \; size 3.97 \; thres 0.12 \; quality 1 \; bsize 262144
 \; gemwin-load bang \; status 0 \; total-images \$1 \; auto-set 1 \;
 ;
 #X obj 19 39 t b f;
+#X msg 104 53 \; total-number 3;
 #X connect 0 0 3 0;
 #X connect 0 1 2 0;
 #X connect 1 0 3 0;
@@ -271,7 +272,8 @@ delayratio 1000 \; size 3.97 \; thres 0.12 \; quality 1 \; bsize 262144
 #X msg 228 41 \; pd-path vis 1 \; pd-path editmode 1 \;;
 #X msg 81 172 \; imgfft \$1 \; imgfft-path-set label PATH:\$1 \;;
 #X obj 18 9 inlet;
-#X msg 66 132 /Users/nyu/Desktop/fid-master-4/fd_imgfft;
+#X msg 66 132 /Users/federicocamarahalac/Documents/fd_work/fid-master/fd_imgfft
+;
 #X obj 66 100 r load-default-path;
 #X obj 18 31 t a a;
 #X obj 18 155 t a a;
@@ -293,7 +295,8 @@ delayratio 1000 \; size 3.97 \; thres 0.12 \; quality 1 \; bsize 262144
 17 7 0 10 -262144 -1 -1;
 #X text 46 25 TYPE FULL PATH AND BANG;
 #X text 180 100 RE-PRELOAD IMAGES IF NECESSARY:;
-#X msg 27 57 /Users/nyu/Desktop/fid-master-4/fd_imgfft;
+#X msg 27 57 /Users/federicocamarahalac/Documents/fd_work/fid-master/fd_imgfft
+;
 #X connect 1 0 6 0;
 #X connect 6 0 2 0;
 #X restore 9 162 pd path ------------;
